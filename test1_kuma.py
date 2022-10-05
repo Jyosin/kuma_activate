@@ -34,9 +34,9 @@ for i in range(len(x)):
     elif x[i] <  380:
         y[i]= -0.0054*x[i]*x[i] + 3.904*x[i] - 582.93         
 # y = np.array(y_list)
-h = 400
+h = 500
 r = h/218
-n = 5
+n = 6
 n_y = 16
 # the right = -h/190 * x = y
 # thr left = h/190 * x - 2h = y
@@ -70,17 +70,17 @@ step_y = the_distance/n_y
 cos = (h+218)/the_distance
 b = [] 
 a = []
-for y in range(n_y-1):
+for yy in range(n_y-1):
     the_distance = the_distance -step_y
     b.append(the_distance)
-    a.append(218-b[y]*cos)
+    a.append(218-b[yy]*cos)
 
 
 
 ax = plt.imshow(img)
 
-# plt.plot(x,y)
-# right
+plt.plot(x,y)
+right
 plt.plot(the_right_x,218,".")
 # left
 plt.plot(the_left_x,218,".")
